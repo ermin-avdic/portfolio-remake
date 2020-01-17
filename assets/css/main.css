@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inconsolata', monospace;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  padding-left: 13px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #616161;
+}
+
+nav ul li a:hover {
+  color: #F4BC16;
+}
+
+.logo h3 {
+  font-size: 2.1rem;
+  text-transform: uppercase;
+  margin: 0;
+  color: #F4BC16;
+  cursor: pointer;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  nav {
+    height: 64px;
+    line-height: 64px;
+  }
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
