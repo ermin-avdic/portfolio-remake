@@ -1,1 +1,2 @@
-console.log("Hello world!");
+// particlesJS.load('particles-js', 'assets/js/particles.json', function() {
+//   });

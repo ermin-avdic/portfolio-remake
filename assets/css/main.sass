@@ -6,6 +6,13 @@ body
     padding: 0
     font-family: 'Inconsolata', monospace
 
+.main
+  height: 100vh
+  background: #252525
+
+// #particles-js
+//   background: #252525
+
 nav
     display: flex
     justify-content: space-between
@@ -28,18 +35,32 @@ nav
         font-size: 2.1rem
         text-transform: uppercase
         margin: 0
-        color: $yellow-primary
+        color: white
         cursor: pointer
-    // img
-    //     width: 70px
-    //     height: 80px
-    //     transform: rotate(-3deg)
 
 .container 
   padding-right: 15px
   padding-left: 15px
   margin-right: auto
   margin-left: auto
+
+.main-content
+  display: grid
+  grid-template-columns: 1fr 1fr
+  color: white
+
+.description
+  h1
+    font-size: 2.3rem
+    font-weight: 600
+  p
+    font-size: 1rem
+    color: #e7e7e7
+    a
+      color: #e7e7e7
+
+// .image
+//   transform: rotate(-10deg)
 
 @media (min-width: 768px)
   nav

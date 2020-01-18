@@ -4,6 +4,11 @@ body {
   font-family: 'Inconsolata', monospace;
 }
 
+.main {
+  height: 100vh;
+  background: #252525;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37,7 +42,7 @@ nav ul li a:hover {
   font-size: 2.1rem;
   text-transform: uppercase;
   margin: 0;
-  color: #F4BC16;
+  color: white;
   cursor: pointer;
 }
 
@@ -46,6 +51,28 @@ nav ul li a:hover {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.main-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  color: white;
+}
+
+.description h1 {
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+
+.description p {
+  font-size: 1rem;
+  color: #e7e7e7;
+}
+
+.description p a {
+  color: #e7e7e7;
 }
 
 @media (min-width: 768px) {
