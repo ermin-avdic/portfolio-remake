@@ -1,12 +1,25 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .main {
   height: 100vh;
-  background: #252525;
+  background: #141E30;
+  background: -webkit-gradient(linear, left top, right top, from(#243B55), to(#141E30));
+  background: linear-gradient(to right, #243B55, #141E30);
+  position: relative;
+  z-index: -3;
+}
+
+.main img {
+  position: absolute;
+  max-width: 25%;
+  height: auto;
+  bottom: -5%;
+  right: 10%;
+  z-index: -1;
 }
 
 nav {
@@ -16,6 +29,7 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  z-index: 1;
 }
 
 nav ul {
@@ -24,25 +38,47 @@ nav ul {
 }
 
 nav ul li {
-  display: inline-block;
-  padding-left: 13px;
+  float: left;
+  padding: 0 13px;
+  -webkit-transition: 0.5s ease;
+}
+
+nav ul li:hover {
+  text-shadow: 0px -2px 0px #000000, 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
+}
+
+nav ul li:nth-of-type(1):hover ~ .underline {
+  left: 0;
+  width: 100px;
+  background: #6464c8;
+}
+
+nav ul li:nth-of-type(2):hover ~ .underline {
+  left: 100px;
+  width: 100px;
+  background: #c86464;
+}
+
+nav ul li:nth-of-type(3):hover ~ .underline {
+  left: 210px;
+  width: 83px;
+  height: 1px;
+  background: rgba(150, 250, 250, 0.5);
+  -webkit-box-shadow: 0 0 10px #46fafa;
+          box-shadow: 0 0 10px #46fafa;
 }
 
 nav ul li a {
   text-decoration: none;
-  font-size: 1.1rem;
-  color: #616161;
-}
-
-nav ul li a:hover {
-  color: #F4BC16;
+  font-size: 1.2rem;
+  color: #bdbdbd;
 }
 
 .logo h3 {
   font-size: 2.1rem;
   text-transform: uppercase;
   margin: 0;
-  color: white;
+  color: #bdbdbd;
   cursor: pointer;
 }
 
@@ -53,26 +89,83 @@ nav ul li a:hover {
   margin-left: auto;
 }
 
+.underline {
+  position: relative;
+  width: 0;
+  height: 5px;
+  background: rgba(100, 100, 200, 0);
+  top: 50px;
+  -webkit-transition: 0.5s ease;
+}
+
 .main-content {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   color: white;
+  position: relative;
+  z-index: -2;
+}
+
+.description {
+  z-index: 1;
 }
 
 .description h1 {
-  font-size: 2.3rem;
-  font-weight: 600;
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .description p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #e7e7e7;
+  letter-spacing: 1px;
 }
 
 .description p a {
   color: #e7e7e7;
+}
+
+#portfolio-container {
+  height: 500px;
+  background: white;
+  z-index: 10;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  margin-top: 20px;
+  padding: 17px 20px;
+  border: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-grad {
+  background-image: -webkit-gradient(linear, left top, right top, from(#EB3349), color-stop(51%, #F45C43), to(#EB3349));
+  background-image: linear-gradient(to right, #EB3349 0%, #F45C43 51%, #EB3349 100%);
+}
+
+.btn-grad:hover {
+  background-position: right center;
 }
 
 @media (min-width: 768px) {
