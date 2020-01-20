@@ -10,16 +10,14 @@ body {
   background: -webkit-gradient(linear, left top, right top, from(#243B55), to(#141E30));
   background: linear-gradient(to right, #243B55, #141E30);
   position: relative;
-  z-index: -3;
 }
 
-.main img {
+.main .editor {
   position: absolute;
   max-width: 25%;
   height: auto;
   bottom: -5%;
   right: 10%;
-  z-index: -1;
 }
 
 nav {
@@ -29,7 +27,6 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  z-index: 1;
 }
 
 nav ul {
@@ -49,23 +46,23 @@ nav ul li:hover {
 
 nav ul li:nth-of-type(1):hover ~ .underline {
   left: 0;
-  width: 100px;
+  width: 105px;
   background: #6464c8;
 }
 
 nav ul li:nth-of-type(2):hover ~ .underline {
-  left: 100px;
+  left: 110px;
   width: 100px;
-  background: #c86464;
+  height: 1px;
+  background: #46fafa;
 }
 
 nav ul li:nth-of-type(3):hover ~ .underline {
-  left: 210px;
-  width: 83px;
-  height: 1px;
+  left: 215px;
+  width: 100px;
   background: rgba(150, 250, 250, 0.5);
-  -webkit-box-shadow: 0 0 10px #46fafa;
-          box-shadow: 0 0 10px #46fafa;
+  -webkit-box-shadow: 0 0 10px #c86464;
+          box-shadow: 0 0 10px #c86464;
 }
 
 nav ul li a {
@@ -105,11 +102,6 @@ nav ul li a {
       grid-template-columns: 1fr 1fr;
   color: white;
   position: relative;
-  z-index: -2;
-}
-
-.description {
-  z-index: 1;
 }
 
 .description h1 {
@@ -130,10 +122,24 @@ nav ul li a {
   color: #e7e7e7;
 }
 
+.icons {
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.icons img {
+  width: 45px;
+  max-height: 45px;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
 #portfolio-container {
   height: 500px;
   background: white;
-  z-index: 10;
 }
 
 .img-responsive {
@@ -146,7 +152,8 @@ nav ul li a {
   padding: 17px 20px;
   border: 0;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
