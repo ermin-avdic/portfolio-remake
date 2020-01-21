@@ -25,6 +25,7 @@ body
 nav
     display: flex
     justify-content: space-between
+    align-items: center
 
     ul
         list-style-type: none
@@ -37,20 +38,26 @@ nav
               text-shadow: 0px -2px 0px #000000, 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5)
             &:nth-of-type(1):hover ~ .underline
               left: 0
-              width: 105px
+              width: 106px
               background: #6464c8
 
             &:nth-of-type(2):hover ~ .underline
               left: 110px
-              width: 100px
+              width: 106px
               height: 1px
               background: #46fafa
 
             &:nth-of-type(3):hover ~ .underline
               left: 215px
-              width: 100px
+              width: 95px
               background: rgba(150, 250, 250, 0.5)
-              box-shadow: 0 0 10px #c86464
+              box-shadow: 0 0 10px #6464c8
+            &:nth-of-type(4):hover ~ .underline
+              left: 315px
+              width: 90px
+              height: 1px
+              background: rgba(150, 250, 250, 0.5)
+              box-shadow: 0 0 10px #46fafa
             a
                 text-decoration: none
                 font-size: 1.2rem
@@ -63,6 +70,15 @@ nav
         margin: 0
         color: $link-primary
         cursor: pointer
+
+.burger
+  display: none
+  div
+    width: 25px
+    height: 3px
+    background-color: $link-primary
+    margin: 5px
+    transition: all 0.3s ease
 
 .container 
   padding-right: 15px
@@ -80,7 +96,7 @@ nav
 
 .main-content
   display: grid
-  grid-template-columns: 1fr 1fr
+  grid-template-columns: 3fr 1fr
   color: white
   position: relative
 
@@ -113,6 +129,10 @@ nav
   height: 500px
   background: white
 
+.nav-active
+  transform: translateX(0%) !important
+  transition: transform 0.5s ease-in
+
 .img-responsive
   max-width: 100%
   height: auto
@@ -141,11 +161,30 @@ nav
 
 @media (min-width: 768px)
   nav
-      height: 64px
-      line-height: 64px
+    min-height: 8vh
   .container 
     width: 750px
-  
+
+//Navbar breaking point for burger menu
+@media (max-width: 797px)
+  body
+    overflow-x: hidden
+  nav
+    ul
+      li
+        float: none
+  .burger
+    display: block
+    cursor: pointer
+  .icons
+    display: none
+  .links
+    position: absolute
+    top: 8vh
+    right: 0
+    height: 92vh
+    width: 30%
+    transform: translateX(100%)
 
 @media (min-width: 992px)
   .container 
@@ -155,6 +194,23 @@ nav
 @media (min-width: 1200px)
   .container 
     width: 1170px
+
+//Navbar animations
+@keyframes navLinkFade
+  from
+    opacity: 0
+    transform: translateX(50px)
+  to
+    opacity: 1
+    transform: translateX(0px)
+
+.toggle .line1
+  transform: rotate(-45deg) translate(-5px, 6px)
+.toggle .line2
+  opacity: 0
+.toggle .line3
+  transform: rotate(45deg) translate(-5px, -6px)
+    
 
 //Button class
 .btn
