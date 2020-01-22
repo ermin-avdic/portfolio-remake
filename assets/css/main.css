@@ -12,12 +12,14 @@ body {
   position: relative;
 }
 
-.main .editor {
+.editor {
   position: absolute;
   max-width: 25%;
   height: auto;
   bottom: -5%;
   right: 10%;
+  -webkit-animation: editor-animation 1s ease;
+          animation: editor-animation 1s ease;
 }
 
 nav {
@@ -222,6 +224,14 @@ nav ul li a {
     float: none;
     opacity: 0;
   }
+  .editor {
+    display: none;
+  }
+  .main-content {
+    text-align: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
   .burger {
     display: block;
     cursor: pointer;
@@ -306,6 +316,32 @@ nav ul li a {
     opacity: 1;
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes editor-animation {
+  0% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes editor-animation {
+  0% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
   }
 }
 

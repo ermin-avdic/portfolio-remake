@@ -29,9 +29,9 @@ window.addEventListener("resize", () => {
 const mainText = document.querySelectorAll("#main-text path");
 
 //Calculating exact stroke length for animations
-// for(let i = 0; i < mainText.length; i++) {
-//     console.log(`Letter ${i} is ${mainText[i].getTotalLength()}`);
+for(let i = 0; i < mainText.length; i++) {
+    console.log(`Letter ${i} is ${mainText[i].getTotalLength()}`);
 
-// }
+}
 
 navSlide();
