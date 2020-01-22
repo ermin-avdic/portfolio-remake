@@ -12,6 +12,7 @@ body
   background: -webkit-linear-gradient(to right, #243B55, #141E30)  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #243B55, #141E30) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   position: relative
+  overflow-x: hidden
 
 .editor
   position: absolute
@@ -165,8 +166,8 @@ nav
 
 //Navbar breaking point for burger menu
 @media (max-width: 797px)
-  body
-    overflow-x: hidden
+  // body
+  //   overflow-x: hidden
   nav
     ul
       li
@@ -174,6 +175,11 @@ nav
         opacity: 0
   .editor
     display: none
+  .description
+    h1
+      font-size: 6rem
+    p
+      font-size: 1.3rem
   .main-content
     text-align: center
     grid-template-columns: 1fr
@@ -212,6 +218,32 @@ nav
           display: none
         &:nth-of-type(4):hover ~ .underline
           display: none
+@media (max-width: 560px)
+  .description
+    h1
+      font-size: 5.5rem
+    p
+      font-size: 1.1rem
+@media (max-width: 507px)
+  .description
+    h1
+      font-size: 5rem
+    p
+      font-size: 1rem
+
+@media (max-width: 450px)
+  .description
+    h1
+      font-size: 4.5rem
+    p
+      font-size: 0.8rem
+
+@media (max-width: 410px)
+  .description
+    h1
+      font-size: 4rem
+    p
+      font-size: 0.8rem
 
 @media (min-width: 992px)
   .container 

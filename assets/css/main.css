@@ -10,6 +10,7 @@ body {
   background: -webkit-gradient(linear, left top, right top, from(#243B55), to(#141E30));
   background: linear-gradient(to right, #243B55, #141E30);
   position: relative;
+  overflow-x: hidden;
 }
 
 .editor {
@@ -217,15 +218,18 @@ nav ul li a {
 }
 
 @media (max-width: 797px) {
-  body {
-    overflow-x: hidden;
-  }
   nav ul li {
     float: none;
     opacity: 0;
   }
   .editor {
     display: none;
+  }
+  .description h1 {
+    font-size: 6rem;
+  }
+  .description p {
+    font-size: 1.3rem;
   }
   .main-content {
     text-align: center;
@@ -278,6 +282,42 @@ nav ul li a {
   }
   .links ul li:nth-of-type(4):hover ~ .underline {
     display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .description h1 {
+    font-size: 5.5rem;
+  }
+  .description p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 507px) {
+  .description h1 {
+    font-size: 5rem;
+  }
+  .description p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .description h1 {
+    font-size: 4.5rem;
+  }
+  .description p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 410px) {
+  .description h1 {
+    font-size: 4rem;
+  }
+  .description p {
+    font-size: 0.8rem;
   }
 }
 
