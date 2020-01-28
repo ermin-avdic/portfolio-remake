@@ -2,9 +2,9 @@ $yellow-primary: #F4BC16
 $link-primary: #bdbdbd
 
 body
-    margin: 0
-    padding: 0
-    font-family: 'Montserrat', sans-serif
+  margin: 0
+  padding: 0
+  font-family: 'Montserrat', sans-serif
 
 .main
   height: 100vh
@@ -12,7 +12,6 @@ body
   background: -webkit-linear-gradient(to right, #243B55, #141E30)  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #243B55, #141E30) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   position: relative
-  overflow-x: hidden
 
 .editor
   position: absolute
@@ -23,53 +22,53 @@ body
   animation: editor-animation 1s ease
 
 nav
-    display: flex
-    justify-content: space-between
-    align-items: center
+  display: flex
+  justify-content: space-between
+  align-items: center
 
-    ul
-        list-style-type: none
-        margin: 0
-        li
-            float: left
-            padding: 0 13px
-            -webkit-transition: 0.5s ease
-            &:hover
-              text-shadow: 0px -2px 0px #000000, 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5)
-            &:nth-of-type(1):hover ~ .underline
-              left: 0
-              width: 106px
-              background: #6464c8
+  ul
+    list-style-type: none
+    margin: 0
+    li
+      float: left
+      padding: 0 13px
+      -webkit-transition: 0.5s ease
+      &:hover
+        text-shadow: 0px -2px 0px #000000, 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5)
+        &:nth-of-type(1):hover ~ .underline
+          left: 0
+          width: 106px
+          background: #6464c8
 
-            &:nth-of-type(2):hover ~ .underline
-              left: 110px
-              width: 106px
-              height: 1px
-              background: #46fafa
+        &:nth-of-type(2):hover ~ .underline
+          left: 110px
+          width: 106px
+          height: 1px
+          background: #46fafa
 
-            &:nth-of-type(3):hover ~ .underline
-              left: 215px
-              width: 95px
-              background: rgba(150, 250, 250, 0.5)
-              box-shadow: 0 0 10px #6464c8
-            &:nth-of-type(4):hover ~ .underline
-              left: 315px
-              width: 90px
-              height: 1px
-              background: rgba(150, 250, 250, 0.5)
-              box-shadow: 0 0 10px #46fafa
-            a
-              text-decoration: none
-              font-size: 1.2rem
-              color: $link-primary
+        &:nth-of-type(3):hover ~ .underline
+          left: 215px
+          width: 95px
+          background: rgba(150, 250, 250, 0.5)
+          box-shadow: 0 0 10px #6464c8
+        &:nth-of-type(4):hover ~ .underline
+          left: 315px
+          width: 90px
+          height: 1px
+          background: rgba(150, 250, 250, 0.5)
+          box-shadow: 0 0 10px #46fafa
+      a
+        text-decoration: none
+        font-size: 1.2rem
+        color: $link-primary
 
 .logo
-    h3
-        font-size: 2.1rem
-        text-transform: uppercase
-        margin: 0
-        color: $link-primary
-        cursor: pointer
+  h3
+    font-size: 2.1rem
+    text-transform: uppercase
+    margin: 0
+    color: $link-primary
+    cursor: pointer
 
 .burger
   display: none
@@ -107,6 +106,7 @@ nav
     line-height: 1.1
     text-transform: uppercase
     margin-bottom: 10px
+    animation: main-text-animation 1.7s ease
   p
     font-size: 1.5rem
     color: #e7e7e7
@@ -149,7 +149,6 @@ nav
   transition: 0.5s
   background-size: 200% auto
   color: white
-  /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
   border-radius: 5px
   text-decoration: none
 
@@ -173,6 +172,8 @@ nav
       li
         float: none
         opacity: 0
+  .main
+    overflow-x: hidden
   .editor
     display: none
   .description
@@ -253,6 +254,14 @@ nav
 @media (min-width: 1200px)
   .container 
     width: 1170px
+
+@keyframes main-text-animation
+  0%
+    transform: translateY(-20%)
+    opacity: 0
+  100%
+    transform: translateY(0%)
+    opacity: 1
 
 //Navbar animations
 @keyframes navLinkFade
@@ -403,12 +412,6 @@ nav
 //     fill: white
 
 //Button class
-.btn
-  a
-  font-size: 1.5em
-  text-transform: uppercase
-  letter-spacing: 0.1em
-  text-decoration: none
 
 .btn
   position: relative
@@ -416,6 +419,10 @@ nav
   padding: 0.5em 2em
   cursor: pointer
   overflow: hidden
+  font-size: 1.5em
+  text-transform: uppercase
+  letter-spacing: 0.1em
+  text-decoration: none
 
   &:before, &:after
     content: ""

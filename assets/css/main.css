@@ -10,7 +10,6 @@ body {
   background: -webkit-gradient(linear, left top, right top, from(#243B55), to(#141E30));
   background: linear-gradient(to right, #243B55, #141E30);
   position: relative;
-  overflow-x: hidden;
 }
 
 .editor {
@@ -50,20 +49,20 @@ nav ul li:hover {
   text-shadow: 0px -2px 0px #000000, 0 0 5px rgba(255, 255, 255, 0.8), 0 -4px 15px rgba(255, 255, 255, 0.5);
 }
 
-nav ul li:nth-of-type(1):hover ~ .underline {
+nav ul li:hover:nth-of-type(1):hover ~ .underline {
   left: 0;
   width: 106px;
   background: #6464c8;
 }
 
-nav ul li:nth-of-type(2):hover ~ .underline {
+nav ul li:hover:nth-of-type(2):hover ~ .underline {
   left: 110px;
   width: 106px;
   height: 1px;
   background: #46fafa;
 }
 
-nav ul li:nth-of-type(3):hover ~ .underline {
+nav ul li:hover:nth-of-type(3):hover ~ .underline {
   left: 215px;
   width: 95px;
   background: rgba(150, 250, 250, 0.5);
@@ -71,7 +70,7 @@ nav ul li:nth-of-type(3):hover ~ .underline {
           box-shadow: 0 0 10px #6464c8;
 }
 
-nav ul li:nth-of-type(4):hover ~ .underline {
+nav ul li:hover:nth-of-type(4):hover ~ .underline {
   left: 315px;
   width: 90px;
   height: 1px;
@@ -138,6 +137,8 @@ nav ul li a {
   line-height: 1.1;
   text-transform: uppercase;
   margin-bottom: 10px;
+  -webkit-animation: main-text-animation 1.7s ease;
+          animation: main-text-animation 1.7s ease;
 }
 
 .description p {
@@ -194,7 +195,6 @@ nav ul li a {
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
   border-radius: 5px;
   text-decoration: none;
 }
@@ -221,6 +221,9 @@ nav ul li a {
   nav ul li {
     float: none;
     opacity: 0;
+  }
+  .main {
+    overflow-x: hidden;
   }
   .editor {
     display: none;
@@ -333,6 +336,32 @@ nav ul li a {
   }
 }
 
+@-webkit-keyframes main-text-animation {
+  0% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes main-text-animation {
+  0% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes navLinkFade {
   from {
     opacity: 0;
@@ -400,18 +429,15 @@ nav ul li a {
 }
 
 .btn {
-  font-size: 1.5em;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  text-decoration: none;
-}
-
-.btn {
   position: relative;
   display: inline-block;
   padding: 0.5em 2em;
   cursor: pointer;
   overflow: hidden;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
 }
 
 .btn:before, .btn:after {
