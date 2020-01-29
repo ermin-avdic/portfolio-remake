@@ -167,11 +167,12 @@ nav ul li a {
 }
 
 #portfolio {
-  margin: 50px 0;
+  margin: 80px 0;
 }
 
 .heading {
   margin-top: 0;
+  margin-bottom: 50px;
   display: inline-block;
   letter-spacing: 1px;
   color: #313D41;
@@ -189,6 +190,52 @@ nav ul li a {
   color: #243B55;
 }
 
+.thumb-unit {
+  position: relative;
+  opacity: 0;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.thumb-unit.is-showing {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.thumb-unit img {
+  display: block;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.thumb-unit:hover p {
+  left: 0%;
+}
+
+.thumb-unit:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.thumb-unit p {
+  position: absolute;
+  bottom: 10px;
+  left: -100%;
+  background: black;
+  color: white;
+  padding: 2px 8px;
+  font-size: 11px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 .divider {
   width: 35px;
   height: 3px;
@@ -196,6 +243,14 @@ nav ul li a {
   display: block;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.portfolio-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
 }
 
 #portfolio-container {
