@@ -137,8 +137,8 @@ nav ul li a {
   line-height: 1.1;
   text-transform: uppercase;
   margin-bottom: 10px;
-  -webkit-animation: main-text-animation 1.7s ease;
-          animation: main-text-animation 1.7s ease;
+  -webkit-animation: main-text-animation 1.3s ease;
+          animation: main-text-animation 1.3s ease;
 }
 
 .description p {
@@ -164,6 +164,38 @@ nav ul li a {
   max-height: 45px;
   padding: 15px 0;
   cursor: pointer;
+}
+
+#portfolio {
+  margin: 50px 0;
+}
+
+.heading {
+  margin-top: 0;
+  display: inline-block;
+  letter-spacing: 1px;
+  color: #313D41;
+}
+
+.heading:hover .divider {
+  width: 100% !important;
+}
+
+.subheading {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #243B55;
+}
+
+.divider {
+  width: 35px;
+  height: 3px;
+  background: #168dff;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #portfolio-container {
