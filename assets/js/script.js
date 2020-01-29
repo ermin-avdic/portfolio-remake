@@ -32,10 +32,10 @@ window.addEventListener("resize", () => {
 document.addEventListener("scroll", function(e) {
   var wScroll = window.pageYOffset + window.innerHeight;
   var portfolioSelector = document.querySelector("#portfolio");
-  var bottom = portfolioSelector.offsetTop + portfolioSelector.offsetHeight;
+  var top = portfolioSelector.offsetTop;
   var units = document.getElementsByClassName("thumb-unit");
 
-  if (wScroll > bottom) {
+  if (wScroll > top * 1.3) {
     for (i = 0; i < units.length; i++) {
       animateOnScroll(i);
     }
