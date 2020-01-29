@@ -281,6 +281,15 @@ nav
           display: none
         &:nth-of-type(4):hover ~ .underline
           display: none
+
+@media (max-width: 650px)
+  .portfolio-grid
+    display: block
+    .thumb-unit
+      margin-bottom: 1em
+      &:last-of-type
+        margin-bottom: 0
+
 @media (max-width: 560px)
   .description
     h1
@@ -311,6 +320,10 @@ nav
 @media (min-width: 992px)
   .container 
     width: 970px
+
+@media (max-width: 992px)
+  .portfolio-grid
+    grid-template-columns: 1fr 1fr
   
 
 @media (min-width: 1200px)

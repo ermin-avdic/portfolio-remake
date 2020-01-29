@@ -375,6 +375,18 @@ nav ul li a {
   }
 }
 
+@media (max-width: 650px) {
+  .portfolio-grid {
+    display: block;
+  }
+  .portfolio-grid .thumb-unit {
+    margin-bottom: 1em;
+  }
+  .portfolio-grid .thumb-unit:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
 @media (max-width: 560px) {
   .description h1 {
     font-size: 5.5rem;
@@ -414,6 +426,13 @@ nav ul li a {
 @media (min-width: 992px) {
   .container {
     width: 970px;
+  }
+}
+
+@media (max-width: 992px) {
+  .portfolio-grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
 }
 
