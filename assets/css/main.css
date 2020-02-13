@@ -189,6 +189,11 @@ nav ul li a {
   color: #243B55;
 }
 
+.text-center {
+  display: block;
+  text-align: center;
+}
+
 .thumb-unit {
   position: relative;
   opacity: 0;
@@ -244,6 +249,14 @@ nav ul li a {
   transition: all 0.3s ease;
 }
 
+.divider-no-animation {
+  width: 35px;
+  height: 3px;
+  background: #168dff;
+  display: block;
+  margin: 5px auto;
+}
+
 .portfolio-grid {
   display: -ms-grid;
   display: grid;
@@ -262,9 +275,21 @@ nav ul li a {
 }
 
 .usluge-unit {
-  background: pink;
+  background: white;
   height: 100%;
   width: 100%;
+  border-radius: 5px;
+}
+
+.usluge-unit h3 {
+  margin-bottom: 25px;
+}
+
+.usluge-unit p {
+  margin-top: 0;
+  padding: 0 15px;
+  letter-spacing: 1px;
+  line-height: 1.3;
 }
 
 #portfolio-container {
