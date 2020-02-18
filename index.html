@@ -246,11 +246,50 @@
       <div class="container">
         <p class="subheading">Kontaktirajte me</p>
         <h1 class="heading">Kontakt<span class="divider"></span></h1>
-        <div class="form">
-          <input type="text" name="name" autocomplete="off" required />
-          <label for="name" class="label-name">
-            <span class="content-name">Ime</span>
-          </label>
+
+        <div class="form-container">
+          <div class="form">
+            <div class="name-section">
+              <input
+                type="text"
+                name="name"
+                placeholder=" "
+                autocomplete="off"
+                required
+              />
+              <label for="name" class="label-name">
+                <span class="content-name">Ime</span>
+              </label>
+            </div>
+          </div>
+          <div class="form">
+            <div class="email-section">
+              <input
+                type="email"
+                name="email"
+                placeholder=" "
+                autocomplete="off"
+                required
+              />
+              <label for="email" class="label-name">
+                <span class="content-name">Email</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form form-textarea">
+          <div class="textarea-section">
+            <textarea
+              name="poruka"
+              id="textarea"
+              placeholder=" "
+              cols="30"
+              rows="10"
+            ></textarea>
+            <label for="textarea" class="label-name">
+              <span class="content-name">Poruka</span>
+            </label>
+          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,8 @@
 $link-primary: #bdbdbd
 $button-bue: #168dff
+$form-text: #595f6e
+$form-blue: #5fa9d3
+$form: #9e9e9e
 
 body
   margin: 0
@@ -235,37 +238,44 @@ nav
 #contact
   padding: 30px 0
 
+.form-container
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 3em
+
 .form
   position: relative
   height: 50px
   overflow: hidden
+  display: block
   input
     width: 100%
     height: 100%
-    color: #595f6e
+    color: $form-text
     padding-top: 20px
     border: none
     outline: none
     &:focus + .label-name::after
       transform: translateX(0%)
-    &:valid + .label-name::after
+    &:not(:placeholder-shown) + .label-name::after
       transform: translateX(0%)
     &:focus + .label-name .content-name
       transform: translateY(-150%)
       font-size: 14px
-      color: #5fa9d3
-    &:valid + .label-name .content-name
+      color: $form-blue
+    &:not(:placeholder-shown) + .label-name .content-name
       transform: translateY(-150%)
       font-size: 14px
-      color: #5fa9d3
+      color: $form-blue
   label
     position: absolute
     bottom: 0
     left: 0
     width: 100%
     height: 100%
+    color: $form
     pointer-events: none
-    border-bottom: 1px solid black
+    border-bottom: 1px solid $form
     &::after
       content: ""
       position: absolute
@@ -273,14 +283,36 @@ nav
       left: 0
       height: 100%
       width: 100%
-      border-bottom: 3px solid #5fa8d3
+      border-bottom: 3px solid $form-blue
       transform: translateX(-100%)
       transition: all 0.3s ease
+  textarea
+    width: 100%
+    height: 100%
+    color: $form-text
+    padding-top: 20px
+    border: none
+    outline: none
+    &:focus + .label-name::after
+      transform: translateX(0%)
+    &:not(:placeholder-shown) + .label-name::after
+      transform: translateX(0%)
+    &:focus + .label-name .content-name
+      transform: translateY(-150%)
+      font-size: 14px
+      color: $form-blue
+    &:not(:placeholder-shown) + .label-name .content-name
+      transform: translateY(-150%)
+      font-size: 14px
+      color: $form-blue
   .content-name
     position: absolute
     bottom: 5px
     left: 0
     transition: all 0.3s ease
+
+.form-textarea
+  margin-top: 10px
 
 
 .nav-active
