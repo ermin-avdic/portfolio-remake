@@ -232,6 +232,57 @@ nav
   height: 500px
   background: white
 
+#contact
+  padding: 30px 0
+
+.form
+  position: relative
+  height: 50px
+  overflow: hidden
+  input
+    width: 100%
+    height: 100%
+    color: #595f6e
+    padding-top: 20px
+    border: none
+    outline: none
+    &:focus + .label-name::after
+      transform: translateX(0%)
+    &:valid + .label-name::after
+      transform: translateX(0%)
+    &:focus + .label-name .content-name
+      transform: translateY(-150%)
+      font-size: 14px
+      color: #5fa9d3
+    &:valid + .label-name .content-name
+      transform: translateY(-150%)
+      font-size: 14px
+      color: #5fa9d3
+  label
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100%
+    pointer-events: none
+    border-bottom: 1px solid black
+    &::after
+      content: ""
+      position: absolute
+      bottom: -1px
+      left: 0
+      height: 100%
+      width: 100%
+      border-bottom: 3px solid #5fa8d3
+      transform: translateX(-100%)
+      transition: all 0.3s ease
+  .content-name
+    position: absolute
+    bottom: 5px
+    left: 0
+    transition: all 0.3s ease
+
+
 .nav-active
   transform: translateX(0%) !important
 
