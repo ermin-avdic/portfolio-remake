@@ -431,8 +431,35 @@ nav ul li a {
   transition: all 0.3s ease;
 }
 
+.form-naslov {
+  margin-top: 10px;
+}
+
 .form-textarea {
   margin-top: 10px;
+}
+
+.form-button {
+  background: #4488af;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 25px;
+  padding: 10px 16px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  float: right;
+}
+
+.form-button:hover {
+  background: #5fa9d3;
+}
+
+.form-button img {
+  height: 20px;
+  width: 20px;
+  margin-bottom: -3px;
+  padding-left: 3px;
 }
 
 .nav-active {
