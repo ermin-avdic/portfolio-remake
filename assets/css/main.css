@@ -635,6 +635,19 @@ nav ul li a {
   }
   .description p {
     font-size: 0.8rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 375px) {
+  .description h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .btn {
+    font-size: 1.4rem !important;
   }
 }
 
@@ -648,6 +661,9 @@ nav ul li a {
   .portfolio-grid {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+  }
+  #usluge .portfolio-grid {
+    display: block;
   }
 }
 
