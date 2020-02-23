@@ -1,8 +1,9 @@
 $link-primary: #bdbdbd
 $button-blue: #168dff
+$form: #9e9e9e
 $form-text: #595f6e
 $form-blue: #5fa9d3
-$form: #9e9e9e
+$form-button: #4488af
 
 body
   margin: 0
@@ -205,6 +206,7 @@ nav
   display: grid
   grid-template-columns: 1fr 1fr 1fr
   grid-gap: 1em
+  margin-bottom: 14px
 
 #usluge
   background: #fafafa
@@ -218,7 +220,6 @@ nav
 
 .usluge-unit
   background: white
-  padding: 0 0 20px 0
   height: 100%
   width: 100%
   border-radius: 2px
@@ -318,7 +319,7 @@ nav
   margin-top: 10px
 
 .form-button
-  background: #4488af
+  background: $form-button
   font-size: 16px
   text-transform: uppercase
   margin-top: 25px
@@ -334,6 +335,14 @@ nav
     width: 20px
     margin-bottom: -3px
     padding-left: 3px
+
+#footer
+  margin-top: 90px
+  background: $form-button
+  color: white
+  p
+    margin: 0
+    padding: 16px 0
 
 .nav-active
   transform: translateX(0%) !important

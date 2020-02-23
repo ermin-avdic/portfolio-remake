@@ -272,6 +272,7 @@ nav ul li a {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1em;
+  margin-bottom: 14px;
 }
 
 #usluge {
@@ -289,7 +290,6 @@ nav ul li a {
 
 .usluge-unit {
   background: white;
-  padding: 0 0 20px 0;
   height: 100%;
   width: 100%;
   border-radius: 2px;
@@ -460,6 +460,17 @@ nav ul li a {
   width: 20px;
   margin-bottom: -3px;
   padding-left: 3px;
+}
+
+#footer {
+  margin-top: 90px;
+  background: #4488af;
+  color: white;
+}
+
+#footer p {
+  margin: 0;
+  padding: 16px 0;
 }
 
 .nav-active {
