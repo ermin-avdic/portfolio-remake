@@ -348,7 +348,8 @@ nav ul li a {
 
 .form input {
   color: #595f6e;
-  padding-top: 20px;
+  margin-bottom: 10px;
+  padding-top: 35px;
   border: none;
   outline: none;
 }
@@ -405,7 +406,7 @@ nav ul li a {
 .form textarea {
   display: block;
   color: #595f6e;
-  padding-top: 20px;
+  padding-top: 25px;
   border: none;
   outline: none;
   overflow: hidden;
@@ -438,24 +439,10 @@ nav ul li a {
 
 .form .content-name {
   position: absolute;
-  bottom: 5px;
+  top: 35px;
   left: 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-
-#autoresizing {
-  display: block;
-  overflow: hidden;
-  resize: none;
-}
-
-.form-naslov {
-  margin-top: 10px;
-}
-
-.form-textarea {
-  margin-top: 10px;
 }
 
 .form-button {
