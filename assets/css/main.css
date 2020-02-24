@@ -342,14 +342,11 @@ nav ul li a {
 
 .form {
   position: relative;
-  height: 50px;
   overflow: hidden;
   display: block;
 }
 
 .form input {
-  width: 100%;
-  height: 100%;
   color: #595f6e;
   padding-top: 20px;
   border: none;
@@ -406,12 +403,13 @@ nav ul li a {
 }
 
 .form textarea {
-  width: 100%;
-  height: 100%;
+  display: block;
   color: #595f6e;
   padding-top: 20px;
   border: none;
   outline: none;
+  overflow: hidden;
+  resize: none;
 }
 
 .form textarea:focus + .label-name::after {
@@ -444,6 +442,12 @@ nav ul li a {
   left: 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+#autoresizing {
+  display: block;
+  overflow: hidden;
+  resize: none;
 }
 
 .form-naslov {

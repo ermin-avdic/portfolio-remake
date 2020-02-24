@@ -47,6 +47,14 @@ document.addEventListener("scroll", function(e) {
   }
 });
 
+textarea = document.querySelector("#textarea");
+textarea.addEventListener("input", autoResize, false);
+
+function autoResize() {
+  this.style.height = "auto";
+  this.style.height = this.scrollHeight + "px";
+}
+
 // const mainText = document.querySelectorAll("#main-text path");
 
 // //Calculating exact stroke length for animations
