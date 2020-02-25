@@ -48,11 +48,15 @@ document.addEventListener("scroll", function(e) {
 });
 
 textarea = document.querySelector("#textarea");
-textarea.addEventListener("input", autoResize, false);
+textarea.addEventListener("keydown", autoResize, false);
 
 function autoResize() {
-  this.style.height = "auto";
-  this.style.height = this.scrollHeight + "px";
+  var e = this;
+  //Timeout is set to prevent overlapping of textarea text with label
+  setTimeout(function() {
+    e.style.cssText = "height:auto; padding:0";
+    e.style.cssText = "height:" + e.scrollHeight + "px";
+  }, 0);
 }
 
 // const mainText = document.querySelectorAll("#main-text path");
