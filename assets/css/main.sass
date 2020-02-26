@@ -21,7 +21,7 @@ body
   position: absolute
   max-width: 25%
   height: auto
-  bottom: 0
+  bottom: -3%
   right: 10%
   animation: editor-animation 1s ease
 
@@ -130,7 +130,9 @@ nav
     cursor: pointer
 
 #portfolio
-  margin: 80px 0
+  padding: 80px 0
+  position: relative
+  background: white
   overflow-x: hidden
 
 .heading
@@ -211,8 +213,11 @@ nav
 #technologies
   display: grid
   grid-template-columns: repeat(8, 1fr)
-  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1)
+  background: white
   padding: 10px 0
+  position: relative
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1)
+  z-index: 1
   img
     margin: 0 auto
     height: 50px
