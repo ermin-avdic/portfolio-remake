@@ -21,7 +21,7 @@ body
   position: absolute
   max-width: 25%
   height: auto
-  bottom: -5%
+  bottom: 0
   right: 10%
   animation: editor-animation 1s ease
 
@@ -209,11 +209,12 @@ nav
   margin-bottom: 14px
 
 #technologies
-  display: flex
-  justify-content: space-around
+  display: grid
+  grid-template-columns: repeat(8, 1fr)
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1)
   padding: 5px 0
   img
+    margin: 0 auto
     height: 50px
 
 #usluge
@@ -477,6 +478,9 @@ nav
     p
       font-size: 0.8rem
       line-height: 1.5
+  #technologies
+    grid-template-columns: repeat(2, 1fr) !important
+    grid-gap: 1em
 
 @media (max-width: 375px)
   .description
@@ -494,6 +498,9 @@ nav
 @media (max-width: 992px)
   .portfolio-grid
     grid-template-columns: 1fr 1fr
+  #technologies
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 1em
   #usluge
     .portfolio-grid
       display: block

@@ -16,7 +16,7 @@ body {
   position: absolute;
   max-width: 25%;
   height: auto;
-  bottom: -5%;
+  bottom: 0;
   right: 10%;
   -webkit-animation: editor-animation 1s ease;
           animation: editor-animation 1s ease;
@@ -276,17 +276,17 @@ nav ul li a {
 }
 
 #technologies {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
   -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
           box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1);
   padding: 5px 0;
 }
 
 #technologies img {
+  margin: 0 auto;
   height: 50px;
 }
 
@@ -643,6 +643,11 @@ nav ul li a {
     font-size: 0.8rem;
     line-height: 1.5;
   }
+  #technologies {
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+    grid-gap: 1em;
+  }
 }
 
 @media (max-width: 375px) {
@@ -667,6 +672,11 @@ nav ul li a {
   .portfolio-grid {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+  }
+  #technologies {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
   }
   #usluge .portfolio-grid {
     display: block;
