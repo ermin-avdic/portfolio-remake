@@ -369,7 +369,8 @@ nav ul li a {
 }
 
 .usluge-unit h3 {
-  margin: 15px 0 25px 15px;
+  margin: 10px 0 25px 0;
+  display: block;
 }
 
 .usluge-unit p {
@@ -381,8 +382,25 @@ nav ul li a {
 
 .usluge-unit img {
   display: block;
-  width: 50%;
-  margin: 15px 0 0 15px;
+  margin: 15px 0 0 0;
+  height: 125px;
+}
+
+.usluge-margin {
+  margin: 15px;
+}
+
+.tags {
+  background: #bdbdbd33;
+  margin: 5px 5px 5px 0;
+  padding: 7px 13px;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.9);
+  border-radius: 7px;
+}
+
+.tags:last-of-type {
+  margin-bottom: 20px;
 }
 
 #portfolio-container {
