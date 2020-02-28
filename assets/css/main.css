@@ -261,7 +261,7 @@ nav ul li a {
 }
 
 .divider-no-animation {
-  width: 10%;
+  width: 35px;
   height: 3px;
   background: #168dff;
   display: block;
@@ -325,10 +325,38 @@ nav ul li a {
 }
 
 .usluge-image {
-  background: url(/assets/img/usluge-image.jpg) center center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(/assets/img/usluge-image.jpg) center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/assets/img/usluge-image.jpg) center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.9);
+  position: relative;
+}
+
+.usluge-image-container {
+  margin: 0 auto;
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.usluge-image-container h3 {
+  font-size: 1.7rem;
+}
+
+.usluge-image-container p {
+  line-height: 1.5;
 }
 
 .usluge-unit {
@@ -341,7 +369,7 @@ nav ul li a {
 }
 
 .usluge-unit h3 {
-  margin-bottom: 25px;
+  margin: 15px 0 25px 15px;
 }
 
 .usluge-unit p {
@@ -349,6 +377,12 @@ nav ul li a {
   padding: 0 15px;
   letter-spacing: 1px;
   line-height: 1.3;
+}
+
+.usluge-unit img {
+  display: block;
+  width: 50%;
+  margin: 15px 0 0 15px;
 }
 
 #portfolio-container {
@@ -471,6 +505,23 @@ nav ul li a {
   left: 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.usluge-button {
+  margin: 0 auto;
+  background: #FF9523;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-top: 25px;
+  padding: 11px 20px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.usluge-button:hover {
+  background: #ffaf58;
 }
 
 .form-button {
