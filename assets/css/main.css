@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
 }
 
 .main {
@@ -325,8 +325,8 @@ nav ul li a {
 }
 
 .usluge-image {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(/assets/img/usluge-image.jpg) center center;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/assets/img/usluge-image.jpg) center center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(/assets/img/usluge-img-water.jpg) center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/assets/img/usluge-img-water.jpg) center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.9);
@@ -527,8 +527,9 @@ nav ul li a {
 
 .usluge-button {
   margin: 0 auto;
-  background: #FF9523;
-  font-size: 18px;
+  background: #168dff;
+  font-size: 16px;
+  font-weight: 300;
   letter-spacing: 1px;
   margin-top: 25px;
   padding: 11px 20px;
@@ -539,7 +540,11 @@ nav ul li a {
 }
 
 .usluge-button:hover {
-  background: #ffaf58;
+  background: #5fa9d3;
+}
+
+.usluge-button:focus {
+  outline: none;
 }
 
 .form-button {
