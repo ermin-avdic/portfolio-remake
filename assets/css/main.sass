@@ -5,6 +5,7 @@ $form-text: #595f6e
 $form-blue: #5fa9d3
 $form-button: #4488af
 $soft-gray: #fafafac3
+$title-main: #313D41
 
 body
   margin: 0
@@ -131,22 +132,28 @@ nav
     cursor: pointer
 
 #about
-  padding: 80px 0
+  padding: 80px 0 0 0
   .illustration
     display: grid
     grid-template-columns: 1fr 1.3fr 1fr
     text-align: center
     & #developer,  & #designer
       display: flex
-      align-items: center
-    #designer
-      h1
-        margin-left: auto
+      flex-direction: column
+      justify-content: center
+      p
+        letter-spacing: 1px
+        line-height: 1.5
+        color: #3c3c3c
+    // #developer
+    //   margin-right: auto
+    // #designer
+    //   margin-left: auto
 
 #portfolio
   padding: 80px 0
   position: relative
-  background: white
+  background: $soft-gray
   overflow-x: hidden
 
 .heading
@@ -237,7 +244,7 @@ nav
     height: 50px
 
 #usluge
-  background: $soft-gray
+  background: white
   padding: 30px 0 80px 0
 
   a
@@ -317,7 +324,10 @@ nav
   background: white
 
 #contact
-  padding: 30px 0
+  background: $soft-gray
+  padding: 30px 0 130px 0
+  input, textarea
+    background: $soft-gray
 
 .form-container
   display: grid
@@ -433,7 +443,6 @@ nav
     padding-left: 3px
 
 #footer
-  margin-top: 90px
   background: $form-button
   color: white
   p
