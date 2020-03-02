@@ -131,6 +131,7 @@ nav ul li a {
   display: grid;
   -ms-grid-columns: 2.5fr 1fr;
       grid-template-columns: 2.5fr 1fr;
+  grid-gap: 1em;
   color: white;
   position: relative;
 }
@@ -151,6 +152,27 @@ nav ul li a {
 
 .description p a {
   color: #e7e7e7;
+}
+
+.json {
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+.lt {
+  padding-left: 15px;
+}
+
+.lthree {
+  padding-left: 15px;
+}
+
+.left {
+  color: #4488af;
+}
+
+.right {
+  color: #ffb69f;
 }
 
 .icons {
@@ -198,6 +220,19 @@ nav ul li a {
   letter-spacing: 1px;
   line-height: 1.5;
   color: #3c3c3c;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: #168dff;
+}
+
+.gt-lt {
+  font-weight: 700;
+  color: #168dff;
 }
 
 #portfolio {
