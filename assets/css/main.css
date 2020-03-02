@@ -4,8 +4,12 @@ body {
   font-family: 'Montserrat';
 }
 
+#landing {
+  overflow: hidden;
+}
+
 .main {
-  height: 100vh;
+  min-height: 100vh;
   background: #141E30;
   background: -webkit-gradient(linear, left top, right top, from(#243B55), to(#141E30));
   background: linear-gradient(to right, #243B55, #141E30);
@@ -125,14 +129,14 @@ nav ul li a {
 .main-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3fr 1fr;
-      grid-template-columns: 3fr 1fr;
+  -ms-grid-columns: 2.5fr 1fr;
+      grid-template-columns: 2.5fr 1fr;
   color: white;
   position: relative;
 }
 
 .description h1 {
-  font-size: 7rem;
+  font-size: 5.9rem;
   font-weight: 700;
   line-height: 1.1;
   text-transform: uppercase;
@@ -166,6 +170,7 @@ nav ul li a {
 
 #about {
   padding: 80px 0 0 0;
+  overflow: hidden;
 }
 
 #about .illustration {
@@ -442,6 +447,7 @@ nav ul li a {
 #contact {
   background: #fafafac3;
   padding: 30px 0 130px 0;
+  overflow: hidden;
 }
 
 #contact input, #contact textarea {
@@ -609,6 +615,7 @@ nav ul li a {
 #footer {
   background: #4488af;
   color: white;
+  overflow: hidden;
 }
 
 #footer p {
@@ -745,6 +752,16 @@ nav ul li a {
   }
 }
 
+@media (max-width: 590px) {
+  .usluge-grid-second {
+    display: block;
+  }
+  .usluge-margin {
+    margin: 1em 0 0 0;
+    padding: 15px 0 0 15px;
+  }
+}
+
 @media (max-width: 560px) {
   .description h1 {
     font-size: 5.5rem;
@@ -805,24 +822,39 @@ nav ul li a {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1217px) {
   .portfolio-grid {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    overflow: hidden;
   }
   #technologies {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     grid-gap: 1em;
+    overflow: hidden;
+  }
+  #usluge {
+    overflow: hidden;
   }
   #usluge .portfolio-grid {
+    display: block;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1217px) {
+  .usluge-image {
+    display: none;
+  }
+  .usluge-grid {
     display: block;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1217px) {
   .container {
-    width: 1170px;
+    width: 1217px;
   }
 }
 

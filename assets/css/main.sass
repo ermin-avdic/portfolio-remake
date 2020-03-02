@@ -12,8 +12,11 @@ body
   padding: 0
   font-family: 'Montserrat'
 
+#landing
+  overflow: hidden
+
 .main
-  height: 100vh
+  min-height: 100vh
   background: #141E30  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #243B55, #141E30)  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #243B55, #141E30) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -101,13 +104,13 @@ nav
 
 .main-content
   display: grid
-  grid-template-columns: 3fr 1fr
+  grid-template-columns: 2.5fr 1fr
   color: white
   position: relative
 
 .description
   h1
-    font-size: 7rem
+    font-size: 5.9rem
     font-weight: 700
     line-height: 1.1
     text-transform: uppercase
@@ -133,6 +136,7 @@ nav
 
 #about
   padding: 80px 0 0 0
+  overflow: hidden
   .illustration
     display: grid
     grid-template-columns: 1fr 1.3fr 1fr
@@ -326,6 +330,7 @@ nav
 #contact
   background: $soft-gray
   padding: 30px 0 130px 0
+  overflow: hidden
   input, textarea
     background: $soft-gray
 
@@ -445,6 +450,7 @@ nav
 #footer
   background: $form-button
   color: white
+  overflow: hidden
   p
     margin: 0
     padding: 16px 0
@@ -548,6 +554,13 @@ nav
       &:last-of-type
         margin-bottom: 0
 
+@media (max-width: 590px)
+  .usluge-grid-second
+    display: block
+  .usluge-margin
+    margin: 1em 0 0 0
+    padding: 15px 0 0 15px
+
 @media (max-width: 560px)
   .description
     h1
@@ -592,20 +605,29 @@ nav
   .container 
     width: 970px
 
-@media (max-width: 992px)
+@media (max-width: 1217px)
   .portfolio-grid
     grid-template-columns: 1fr 1fr
+    overflow: hidden
   #technologies
     grid-template-columns: repeat(4, 1fr)
     grid-gap: 1em
+    overflow: hidden
   #usluge
+    overflow: hidden
     .portfolio-grid
       display: block
-  
+      overflow: hidden
 
-@media (min-width: 1200px)
+@media (max-width: 1217px)
+  .usluge-image
+    display: none
+  .usluge-grid
+    display: block
+
+@media (min-width: 1217px)
   .container 
-    width: 1170px
+    width: 1217px
 
 // @media (max-width: 1400px)
 //   .container
