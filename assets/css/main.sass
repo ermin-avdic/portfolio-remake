@@ -487,27 +487,6 @@ nav
   max-width: 100%
   height: auto
 
-.button
-  margin-top: 20px
-  padding: 17px 20px
-  border: 0
-  font-size: 1rem
-  font-weight: 600
-  letter-spacing: 1px
-  text-align: center
-  text-transform: uppercase
-  cursor: pointer
-  transition: 0.5s
-  background-size: 200% auto
-  color: white
-  border-radius: 5px
-  text-decoration: none
-
-.btn-grad
-  background-image: linear-gradient(to right, #EB3349 0%, #F45C43 51%, #EB3349 100%)
-  &:hover
-    background-position: right center
-
 @media (min-width: 768px)
   nav
     min-height: 8vh
@@ -571,6 +550,21 @@ nav
         &:nth-of-type(4):hover ~ .underline
           display: none
 
+@media (max-width: 767px)
+  .description
+    h1
+      font-size: 5.5rem
+
+@media (max-width: 711px)
+  .description
+    h1
+      font-size: 5.1rem
+
+@media (max-width: 770px)
+  .description
+    h1
+      font-size: 4.7rem
+
 @media (max-width: 650px)
   .portfolio-grid
     display: block
@@ -579,6 +573,24 @@ nav
       &:last-of-type
         margin-bottom: 0
 
+@media (max-width: 611px)
+  .description
+    h1
+      font-size: 4.3rem
+    p
+      font-size: 1.1rem
+      line-height: 1.5
+
+@media (max-width: 550px)
+  .description
+    h1
+      font-size: 4rem
+
+@media (max-width: 521px)
+  .description
+    h1
+      font-size: 3.7rem
+
 @media (max-width: 590px)
   .usluge-grid-second
     display: block
@@ -586,41 +598,37 @@ nav
     margin: 1em 0 0 0
     padding: 15px 0 0 15px
 
-@media (max-width: 560px)
-  .description
-    h1
-      font-size: 5.5rem
-    p
-      font-size: 1.1rem
 @media (max-width: 507px)
-  .description
-    h1
-      font-size: 5rem
-    p
-      font-size: 1rem
   #technologies
     grid-template-columns: repeat(2, 1fr) !important
     grid-gap: 1em
 
+@media (max-width: 490px)
+  .description
+    h1
+      font-size: 3.4rem
+
 @media (max-width: 450px)
   .description
     h1
-      font-size: 4.5rem
-    p
-      font-size: 0.8rem
+      font-size: 3.1rem
 
-@media (max-width: 410px)
+@media (max-width: 407px)
   .description
     h1
-      font-size: 4rem
-    p
-      font-size: 0.8rem
-      line-height: 1.5
+      font-size: 2.8rem
 
 @media (max-width: 375px)
   .description
     h1
-      font-size: 3.5rem
+      font-size: 2.5rem
+    p
+      line-height: 1.3
+
+@media (max-width: 340px)
+  .description
+    h1
+      font-size: 2.3rem
 
 @media (max-width: 350px)
   .btn
@@ -824,6 +832,7 @@ nav
 
 //Button class
 .btn
+  margin: 15px 0 35px 0
   position: relative
   display: inline-block
   padding: 0.5em 2em
