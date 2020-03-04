@@ -243,6 +243,10 @@ nav ul li a {
   color: #168dff;
 }
 
+.developer-display {
+  display: none;
+}
+
 #portfolio {
   padding: 80px 0;
   position: relative;
@@ -696,6 +700,20 @@ nav ul li a {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  #developer {
+    display: none !important;
+  }
+  .illustration {
+    -ms-grid-columns: 1fr 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
+    grid-gap: 1em;
+  }
+  .illustration p {
+    font-size: 14px;
+  }
+  .developer-display {
+    display: block;
+  }
 }
 
 @media (max-width: 1010px) {
@@ -775,6 +793,19 @@ nav ul li a {
 @media (max-width: 770px) {
   .description h1 {
     font-size: 4.7rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .illustration {
+    display: block !important;
+  }
+  #flat {
+    width: 55%;
+    margin: 0 auto;
+  }
+  .developer-display p {
+    margin-bottom: 50px;
   }
 }
 

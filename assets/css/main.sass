@@ -184,6 +184,9 @@ nav
   font-weight: 700
   color: $button-blue
 
+.developer-display
+  display: none
+
 #portfolio
   padding: 80px 0
   position: relative
@@ -505,6 +508,15 @@ nav
   .main-content
     text-align: center
     grid-template-columns: 1fr
+  #developer
+    display: none !important
+  .illustration
+    grid-template-columns: 1fr 1fr !important
+    grid-gap: 1em
+    p
+      font-size: 14px
+  .developer-display
+    display: block
 
 //Navbar breaking point for burger menu
 @media (max-width: 1010px)
@@ -568,6 +580,16 @@ nav
   .description
     h1
       font-size: 4.7rem
+
+@media (max-width: 680px)
+  .illustration
+    display: block !important
+  #flat
+    width: 55%
+    margin: 0 auto
+  .developer-display
+    p
+      margin-bottom: 50px
 
 @media (max-width: 650px)
   .portfolio-grid
